@@ -13,7 +13,7 @@ public class UserRegistrationTest {
 
         public void testValidPassword(){
 
-            assertTrue(userRegistration.isValid("Aditi2002"));
+            assertTrue(userRegistration.isValid("Aditipatil2"));
         }
 
 
