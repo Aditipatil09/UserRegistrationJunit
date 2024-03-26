@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class UserRegistration {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your first Name:");
+        System.out.println("Enter your First Name:");
         String firstName =scanner.nextLine();
 
         if(isValid(firstName)){
-            System.out.println("Valid first name");
+            System.out.println("Valid First Name:");
         }else {
-            System.out.println("Invalid first name:");
+            System.out.println("Invalid First Name:");
         }
     }
     public static boolean isValid(String firstName){
