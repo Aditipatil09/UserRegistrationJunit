@@ -13,6 +13,8 @@ public class UserRegistration {
         }else {
             System.out.println("Invalid Last Name:");
         }
+
+
     }
     public static boolean isValid(String lastName){
         if(lastName==null || lastName.isEmpty() || lastName.length()<3){
