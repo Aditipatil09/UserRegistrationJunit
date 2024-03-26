@@ -11,9 +11,9 @@ public class UserRegistrationTest {
 
         @Test
 
-        public void testValidPhoneNumber(){
+        public void testValidPassword(){
 
-            assertTrue(userRegistration.isValid("91369326030"));
+            assertTrue(userRegistration.isValid("Aditi2002"));
         }
 
 

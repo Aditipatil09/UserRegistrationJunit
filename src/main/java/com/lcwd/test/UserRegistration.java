@@ -7,21 +7,21 @@ public class UserRegistration {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your Phone Number:");
-        String phoneNumber =scanner.nextLine();
+        String password =scanner.nextLine();
 
-        if(isValid(phoneNumber)){
-            System.out.println("Valid Phone Number:");
+        if(isValid(password)){
+            System.out.println("Valid Password:");
         }else {
-            System.out.println("Invalid Phone number:");
+            System.out.println("Invalid Password:");
         }
 
 
     }
-    public static boolean isValid(String phoneNumber){
+    public static boolean isValid(String password){
 
-        String Regex = "[91][0-9]{10}";
+        String Regex = "[a-zA-Z0-9]{8,}";
         Pattern pattern = Pattern.compile(Regex);
-        Matcher matcher = pattern.matcher(phoneNumber);
+        Matcher matcher = pattern.matcher(password);
 
         return matcher.matches();
 
