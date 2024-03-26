@@ -11,14 +11,14 @@ public class UserRegistrationTest {
 
         @Test
 
-        public void testValidLastName(){
+        public void testValidEmailId(){
 
-            assertTrue(userRegistration.isValid("Aditi"));
+            assertTrue(userRegistration.isValid("aditipatil2002@gmail.com"));
         }
 
-        public void testInvalidLastName(){
+        public void testInvalidEmailId(){
 
-            assertFalse(userRegistration.isValid("aditi"));
+            assertFalse(userRegistration.isValid("aditi@gmail.com"));
         }
     }
 

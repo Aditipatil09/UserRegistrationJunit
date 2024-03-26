@@ -1,27 +1,30 @@
 package com.lcwd.test;
 
 import java.util.Scanner;
+import java.util.regex.*;
 
 public class UserRegistration {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your Last Name:");
-        String lastName =scanner.nextLine();
+        System.out.println("Enter your Email Id:");
+        String emialId =scanner.nextLine();
 
-        if(isValid(lastName)){
-            System.out.println("Valid Last Name:");
+        if(isValid(emialId)){
+            System.out.println("Valid Email Id:");
         }else {
-            System.out.println("Invalid Last Name:");
+            System.out.println("Invalid Email Id:");
         }
 
 
     }
-    public static boolean isValid(String lastName){
-        if(lastName==null || lastName.isEmpty() || lastName.length()<3){
-            return false;
-        }
-        char lastChar = lastName.charAt(0);
-        return Character.isUpperCase(lastChar);
+    public static boolean isValid(String emialId){
+
+        String Regex = "[a-z 0-9]+[@][a-z]+[.][a-z]{2,3}";
+        Pattern pattern = Pattern.compile(Regex);
+        Matcher matcher = pattern.matcher(emialId);
+
+        return matcher.matches();
+
     }
 
 }
