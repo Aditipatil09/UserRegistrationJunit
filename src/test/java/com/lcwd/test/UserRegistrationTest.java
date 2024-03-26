@@ -11,12 +11,12 @@ public class UserRegistrationTest {
 
         @Test
 
-        public void testValidFirstName(){
+        public void testValidLastName(){
 
             assertTrue(userRegistration.isValid("Aditi"));
         }
 
-        public void testInvalidFirstName(){
+        public void testInvalidLastName(){
 
             assertFalse(userRegistration.isValid("aditi"));
         }
