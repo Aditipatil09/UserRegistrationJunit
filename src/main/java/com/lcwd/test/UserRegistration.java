@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class UserRegistration {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your First Name:");
-        String firstName =scanner.nextLine();
+        System.out.println("Enter your Last Name:");
+        String lastName =scanner.nextLine();
 
-        if(isValid(firstName)){
-            System.out.println("Valid First Name:");
+        if(isValid(lastName)){
+            System.out.println("Valid Last Name:");
         }else {
-            System.out.println("Invalid First Name:");
+            System.out.println("Invalid Last Name:");
         }
     }
-    public static boolean isValid(String firstName){
-        if(firstName==null || firstName.isEmpty() || firstName.length()<3){
+    public static boolean isValid(String lastName){
+        if(lastName==null || lastName.isEmpty() || lastName.length()<3){
             return false;
         }
-        char lastChar = firstName.charAt(0);
+        char lastChar = lastName.charAt(0);
         return Character.isUpperCase(lastChar);
     }
 
