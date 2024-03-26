@@ -6,22 +6,22 @@ import java.util.regex.*;
 public class UserRegistration {
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your Email Id:");
-        String emialId =scanner.nextLine();
+        System.out.println("Enter your Phone Number:");
+        String phoneNumber =scanner.nextLine();
 
-        if(isValid(emialId)){
-            System.out.println("Valid Email Id:");
+        if(isValid(phoneNumber)){
+            System.out.println("Valid Phone Number:");
         }else {
-            System.out.println("Invalid Email Id:");
+            System.out.println("Invalid Phone number:");
         }
 
 
     }
-    public static boolean isValid(String emialId){
+    public static boolean isValid(String phoneNumber){
 
-        String Regex = "[a-z 0-9]+[@][a-z]+[.][a-z]{2,3}";
+        String Regex = "[91][0-9]{10}";
         Pattern pattern = Pattern.compile(Regex);
-        Matcher matcher = pattern.matcher(emialId);
+        Matcher matcher = pattern.matcher(phoneNumber);
 
         return matcher.matches();
 

@@ -11,14 +11,11 @@ public class UserRegistrationTest {
 
         @Test
 
-        public void testValidEmailId(){
+        public void testValidPhoneNumber(){
 
-            assertTrue(userRegistration.isValid("aditipatil2002@gmail.com"));
+            assertTrue(userRegistration.isValid("91369326030"));
         }
 
-        public void testInvalidEmailId(){
 
-            assertFalse(userRegistration.isValid("aditi@gmail.com"));
-        }
     }
 
