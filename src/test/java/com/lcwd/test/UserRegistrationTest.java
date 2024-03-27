@@ -11,9 +11,9 @@ public class UserRegistrationTest {
 
         @Test
 
-        public void testValidPassword(){
+        public void testValidEmailId(){
 
-            assertTrue(userRegistration.isValid("Aditipatil2"));
+            assertTrue(userRegistration.isValid("aditipatil2002@gmail.com"));
         }
 
 
